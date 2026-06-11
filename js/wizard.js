@@ -93,6 +93,12 @@ async function iniciar() {
     return;
   }
 
+  // Modo demo (?demo=1): si js/seed.js está cargado, siembra reservas
+  // ficticias ANTES del primer render. Ver cabecera de js/seed.js.
+  if (typeof sembrarDatosDemo === 'function') {
+    sembrarDatosDemo(config);
+  }
+
   pintarAmbiente();
   render();
 }

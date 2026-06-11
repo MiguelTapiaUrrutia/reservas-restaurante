@@ -582,6 +582,21 @@ input:focus-visible {
   border-left: 4px solid var(--color-aviso-texto);
 }
 
+/* Aviso discreto del modo demo (?demo=1 en la URL, ver js/seed.js) */
+.banner--demo {
+  background: var(--color-superficie-alt);
+  color: var(--color-texto-suave);
+  font-size: var(--texto-chico);
+  padding: var(--espacio-2) var(--espacio-3);
+  margin-bottom: var(--espacio-4);
+}
+
+.banner--demo .banner-icono {
+  width: 1.1rem;
+  height: 1.1rem;
+  margin-top: 0.1rem;
+}
+
 .banner-accion {
   font: inherit;
   font-size: var(--texto-chico);
