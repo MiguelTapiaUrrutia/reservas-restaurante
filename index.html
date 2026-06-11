@@ -4,24 +4,75 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>La Mesa del Bío Bío — Reservas</title>
+  <meta name="description" content="Cocina de la tierra y el río en Concepción. Reserva tu mesa en línea." />
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
-  <header>
-    <h1>La Mesa del Bío Bío</h1>
-    <p>Cocina del sur, frente al río — Concepción</p>
+  <header class="hero">
+    <p class="hero-eyebrow">Concepción · Ribera del Bío Bío</p>
+    <h1 class="hero-nombre">La Mesa<br />del Bío&nbsp;Bío</h1>
+    <p class="hero-identidad">Cocina de la tierra y el río</p>
+    <a href="#reservar" class="boton boton--primario hero-cta">Reservar mesa</a>
   </header>
 
   <main>
-    <!-- Fase de UI: aquí irá el formulario de reservas -->
+    <section class="ambiente" aria-labelledby="ambiente-titulo">
+      <!-- Placeholder visual: reemplazar este div por una <img> de interior
+           cálido de restaurante (greda, madera, luz baja) con licencia libre
+           de Unsplash o Pexels. Recordar alt descriptivo, width/height
+           explícitos y loading="lazy" (está bajo el pliegue). -->
+      <div class="ambiente-visual" aria-hidden="true"></div>
+
+      <div class="ambiente-texto">
+        <p class="etiqueta-seccion">El lugar</p>
+        <h2 id="ambiente-titulo">Mesa puesta frente al río</h2>
+        <p>
+          Greda de Quinchamalí, pan amasado saliendo del horno y lo que
+          la lancha trajo en la mañana. Cocinamos lo que da la tierra y
+          el río, sin apuro y sin adornos.
+        </p>
+
+        <h3 class="horarios-titulo">Horarios</h3>
+        <dl id="horarios" class="horarios">
+          <!-- Render desde data/config.json (js/wizard.js) -->
+        </dl>
+        <p id="nota-cierre" class="nota-cierre"></p>
+
+        <p class="direccion">Avenida Costanera 1450, Concepción</p>
+      </div>
+    </section>
+
+    <section id="reservar" class="reservar" aria-labelledby="reservar-titulo">
+      <p class="etiqueta-seccion">Reservas</p>
+      <h2 id="reservar-titulo">Reserva tu mesa</h2>
+
+      <div id="wizard" class="wizard">
+        <noscript>
+          <p>
+            El formulario de reservas necesita JavaScript. También puedes
+            reservar llamando al <a href="tel:+56412345678">+56 41 234 5678</a>.
+          </p>
+        </noscript>
+      </div>
+    </section>
   </main>
 
-  <footer>
-    <p><small>Proyecto de práctica — sin reservas reales.</small></p>
+  <footer class="footer">
+    <p class="footer-nombre">La Mesa del Bío&nbsp;Bío</p>
+    <address class="footer-datos">
+      Avenida Costanera 1450, Concepción ·
+      <a href="tel:+56412345678">+56 41 234 5678</a> ·
+      <a href="mailto:hola@lamesadelbiobio.cl">hola@lamesadelbiobio.cl</a>
+    </address>
+    <p class="footer-nota"><small>Proyecto de práctica — sin reservas reales.</small></p>
   </footer>
 
+  <!-- fechas/reglas/storage son scripts clásicos: exponen funciones globales
+       puras. wizard.js es un módulo ES que las consume; por orden de carga
+       (los clásicos bloquean, el módulo se difiere) siempre las encuentra. -->
   <script src="js/fechas.js"></script>
   <script src="js/reglas.js"></script>
   <script src="js/storage.js"></script>
+  <script type="module" src="js/wizard.js"></script>
 </body>
 </html>
