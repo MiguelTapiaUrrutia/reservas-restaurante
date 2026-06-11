@@ -1,0 +1,19 @@
+{
+  "nombre": "La Mesa del Bío Bío",
+  "mesas": [
+    { "id": "M1", "capacidad": 2 },
+    { "id": "M2", "capacidad": 2 },
+    { "id": "M3", "capacidad": 2 },
+    { "id": "M4", "capacidad": 4 },
+    { "id": "M5", "capacidad": 4 },
+    { "id": "M6", "capacidad": 4 },
+    { "id": "M7", "capacidad": 6 },
+    { "id": "M8", "capacidad": 8 }
+  ],
+  "turnos": [
+    { "id": "almuerzo", "hora": "13:00" },
+    { "id": "cena", "hora": "20:00" }
+  ],
+  "diasCerrado": ["lunes"],
+  "anticipacionMaximaDias": 30
+}

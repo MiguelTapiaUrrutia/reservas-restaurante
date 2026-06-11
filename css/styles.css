@@ -1,0 +1,48 @@
+/* css/styles.css — La Mesa del Bío Bío
+   Fase actual: SOLO design tokens. Los estilos de componentes llegan
+   con la interfaz.
+
+   Dirección visual: restaurante acogedor y sobrio. Base crema cálida
+   (mantel de lino), tinta café espresso en vez de negro puro, terracota
+   de greda como acento principal y un verde salvia discreto para los
+   estados positivos. Nada de colores eléctricos. */
+
+:root {
+  /* --- Color: superficies y texto --- */
+  --color-fondo: #faf6ef;        /* crema lino: fondo general */
+  --color-superficie: #ffffff;   /* tarjetas y paneles */
+  --color-superficie-alt: #f1e9dc; /* paneles secundarios, filas alternas */
+  --color-texto: #2b2118;        /* café espresso, casi negro cálido */
+  --color-texto-suave: #6f6258;  /* texto secundario, ayudas */
+  --color-borde: #ded3c2;        /* líneas y separadores */
+
+  /* --- Color: identidad y semánticos --- */
+  --color-acento: #b4552d;       /* terracota greda: acciones, marca */
+  --color-acento-hover: #93431f; /* terracota oscurecida para hover */
+  --color-exito: #5a7052;        /* salvia: reserva confirmada, test ok */
+  --color-error: #9c3b25;        /* rojo teja: rechazos y fallas */
+  --color-aviso: #a8852f;        /* ocre: advertencias suaves */
+
+  /* --- Tipografía --- */
+  --fuente-titulos: Georgia, 'Times New Roman', serif;
+  --fuente-texto: system-ui, 'Segoe UI', sans-serif;
+  --texto-base: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
+  --texto-titulo: clamp(1.75rem, 1.2rem + 2.5vw, 3rem);
+  --texto-chico: 0.875rem;
+
+  /* --- Espaciado y forma --- */
+  --espacio-1: 0.25rem;
+  --espacio-2: 0.5rem;
+  --espacio-3: 1rem;
+  --espacio-4: 1.5rem;
+  --espacio-5: 2.5rem;
+  --espacio-seccion: clamp(3rem, 2rem + 4vw, 6rem);
+  --radio: 6px;
+  --radio-grande: 12px;
+  --sombra-suave: 0 2px 12px rgba(43, 33, 24, 0.08);
+
+  /* --- Movimiento --- */
+  --duracion-rapida: 150ms;
+  --duracion-normal: 300ms;
+  --curva-salida: cubic-bezier(0.16, 1, 0.3, 1);
+}
